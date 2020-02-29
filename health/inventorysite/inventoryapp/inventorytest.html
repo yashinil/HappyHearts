@@ -1,0 +1,15 @@
+{% if items %}
+        <!--<p>Found {{ travel|length }} name{{ travel|pluralize }}.</p> -->
+        <ul>
+            {% for item in items %}
+            <li class="new">{{ item.name }}</li>
+            <li class="new">{{item.location}}</li>
+            <li class="new">{{item.notes}}</li>
+            <img src="/media/{{item.image}}">
+
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No names matched your search criteria.</p>
+
+{% endif %}
